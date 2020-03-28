@@ -1,0 +1,85 @@
+import { List, Card } from 'antd';
+import { Link } from 'umi';
+import cate_jsj from '@/assets/images/category/cate_jsj.jpg';
+import cate_clct from '@/assets/images/category/cate_clct.jpg';
+import cate_rhxt from '@/assets/images/category/cate_rhxt.jpg';
+import cate_dzcl from '@/assets/images/category/cate_dzcl.jpg';
+import cate_lxsjj from '@/assets/images/category/cate_lxsjj.jpg';
+import cate_tbddg from '@/assets/images/category/cate_tbddg.jpg';
+import cate_fjgj from '@/assets/images/category/cate_fjgj.jpg';
+import cate_zhmj from '@/assets/images/category/cate_zhmj.jpg';
+
+const { Meta } = Card;
+
+export default () => {
+  const categories = [{
+    'id': 1,
+    'img': cate_jsj,
+    'title': '减速机',
+  },
+    {
+      'id': 2,
+      'img': cate_clct,
+      'title': '齿轮齿条',
+    },
+    {
+      'id': 3,
+      'img': cate_rhxt,
+      'title': '润滑系统',
+    }, {
+      'id': 4,
+      'img': cate_dzcl,
+      'title': '齿轮定制',
+    }
+    , {
+      'id': 5,
+      'img': cate_lxsjj,
+      'title': '螺旋升降机',
+    }
+    , {
+      'id': 6,
+      'img': cate_tbddg,
+      'title': '同步电动缸',
+    }
+    , {
+      'id': 7,
+      'img': cate_fjgj,
+      'title': '附件工具',
+    },
+    {
+      'id': 8,
+      'img': cate_zhmj,
+      'title': '组合模组',
+    },
+  ];
+
+
+  return (
+    <List
+      style={{ marginTop: 20, padding: 20 }}
+      grid={{
+        gutter: 32,
+        xs: 2,
+        sm: 2,
+        md: 3,
+        lg: 4,
+        xl: 4,
+        xxl: 4,
+      }}
+      dataSource={categories}
+      renderItem={category => (
+        <List.Item>
+          <Link to={`/categories/${category.id}`}>
+            <Card
+              hoverable
+              size={'small'}
+              cover={<img alt={category.title} src={category.img}/>}
+            >
+              <Meta title={category.title}/>
+            </Card>
+          </Link>
+        </List.Item>
+      )}
+    />
+  );
+}
