@@ -1,4 +1,4 @@
-FROM circleci/node:latest-browsers
+FROM node:12.6.1-alpine
 
 WORKDIR /usr/src/app/
 USER root
@@ -7,4 +7,4 @@ RUN yarn
 
 COPY ./ ./
 
-CMD ["npm", "run", "build"]
+CMD ["npm", "run", "build-prod"]
