@@ -3,7 +3,7 @@ FROM node:12.6.1-alpine
 WORKDIR /usr/src/app/
 USER root
 COPY package.json ./
-RUN yarn
+RUN npm install --registry=https://registry.npm.taobao.org
 
 COPY ./ ./
 
