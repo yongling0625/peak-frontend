@@ -8,7 +8,7 @@ services:
       - dist:/usr/src/app/dist
 
   peak-frontend_web:
-    image: stable-alpine
+    image: nginx:stable-alpine
     ports:
       - 80:80
     container_name: 'peak-frontend_web'
