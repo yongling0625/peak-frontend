@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'dva';
-import { Row, Col, Card, List } from 'antd';
+import { Row, Col, List } from 'antd';
 import styles from './index.less';
 import { Link } from 'umi';
-
-const { Meta } = Card;
 
 export default connect(({ products, loading }) => ({
   products: products.products,
@@ -38,7 +36,7 @@ export default connect(({ products, loading }) => ({
             xl: 4,
             xxl: 4,
           }}
-          dataSource={products}
+          dataSource={products.records}
           renderItem={item => (
             <List.Item>
               <Link to={`/products/${item.id}`}>

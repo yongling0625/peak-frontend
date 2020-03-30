@@ -47,10 +47,10 @@ export default connect(({ download, loading }) => ({
                 dataSource={item.products}
                 renderItem={product => (
                   <List.Item>
-                    <Link to={product.pdf}>
+                    <a target={'_blank'} href={product.pdf}>
                       <img src={product.img} alt={product.title}/>
                       <p>{product.title}</p>
-                    </Link>
+                    </a>
                   </List.Item>
                 )}
               />
