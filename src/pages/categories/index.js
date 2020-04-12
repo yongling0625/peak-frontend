@@ -6,7 +6,7 @@ import cate_rhxt from '@/assets/images/category/cate_rhxt.jpg';
 import cate_dzcl from '@/assets/images/category/cate_dzcl.jpg';
 import cate_lxsjj from '@/assets/images/category/cate_lxsjj.jpg';
 import cate_tbddg from '@/assets/images/category/cate_tbddg.jpg';
-import cate_fjgj from '@/assets/images/category/cate_fjgj.jpg';
+import cate_fjgj from '@/assets/images/category/cate_fjgj.png';
 import cate_zhmj from '@/assets/images/category/cate_zhmj.jpg';
 
 const { Meta } = Card;

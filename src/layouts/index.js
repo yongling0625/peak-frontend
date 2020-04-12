@@ -7,6 +7,15 @@ import styles from './index.less';
 const { Content } = Layout;
 
 export default (props) => {
+
+  if (props.location.pathname === '/') {
+    return (
+      <div className={styles.normal}>
+        {props.children}
+      </div>
+    );
+  }
+
   return (
     <Layout className={styles.normal}>
       <Header/>

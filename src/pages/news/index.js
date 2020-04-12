@@ -1,7 +1,7 @@
+import React from 'react';
 import { Row, Col, Card, Typography } from 'antd';
 import new01 from '@/assets/images/news01.jpg';
 import new02 from '@/assets/images/news02.jpg';
-import React from 'react';
 
 const { Title, Paragraph } = Typography;
 

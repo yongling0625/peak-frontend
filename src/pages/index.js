@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
-import { Button, Row, Col, Typography, Divider, Carousel } from 'antd';
+import { Button, Row, Col, Typography, Divider, Carousel ,Affix } from 'antd';
 import { GlobalOutlined, GoldOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import Header from '@/components/Header';
 
 import HomeCarousel from '@/components/Carousel';
 import cate_jsj from '@/assets/images/category/cate_jsj.jpg';
 import cate_clct from '@/assets/images/category/cate_clct.jpg';
 import cate_lxsjj from '@/assets/images/category/cate_lxsjj.jpg';
 import cate_dzcl from '@/assets/images/category/cate_dzcl.jpg';
+import new02 from '@/assets/images/news02.jpg';
 import styles from './index.less';
 
 const { Title, Paragraph } = Typography;
@@ -20,17 +22,10 @@ export default () => {
             size={'large'}
             onClick={() => carouselRef.current.next()}/>;
 
-
   return (
     <>
+      <Affix style={{ position: 'fixed', zIndex: 1, width: '100%'}}><Header/></Affix>
       <HomeCarousel/>
-      <div>
-        <Row>
-
-        </Row>
-
-      </div>
-
       <div style={{ padding: 50 }}>
         <Row>
           <Col>
@@ -49,14 +44,14 @@ export default () => {
             color: '#f41d23'
           }}>
             <GlobalOutlined/><p>愿景</p>
-            <p>公司以成为“敏捷化的国际性公司”为愿景</p>
+            <p>成为最优秀的精密传动解决方案提供商</p>
           </Col>
           <Col xs={24} xl={12} style={{
             color: '#f41d23'
           }}>
             <GoldOutlined/>
             <p>使命</p>
-            <p>在机电产品制造领域向客户提供工业加工过程的单台设备、工段、车间、组合生产线，协助客户实现数字化工厂的梦想</p>
+            <p>聚焦客户需求、提供高效解决方案、创造最大价值、实现共同发展</p>
           </Col>
         </Row>
       </div>
@@ -202,6 +197,22 @@ export default () => {
           </Row>
         </div>
       </Carousel>
+
+      <div>
+        <Row>
+          <Col xs={10} xl={4}>
+            <img src={new02}/>
+          </Col>
+          <Col xs={14} xl={20}>
+            <Typography>
+              <Title level={4}>聊城市委副书记、代市长李长萍一行莅临公司参观指导</Title>
+              <Paragraph>
+                廊坊市广用自动化设备有限公司专业服务于自动化领域，从事自动化产品的技术支持和销售。公司本着为用户提供理想服务的原则，建立了优秀的销售队伍、完善的服务体系，为国内众多用户提供了优质的产品和良好的服务。
+              </Paragraph>
+            </Typography>
+          </Col>
+        </Row>
+      </div>
     </>
   );
 }

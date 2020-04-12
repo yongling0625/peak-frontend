@@ -16,6 +16,11 @@ const { Title, Paragraph } = Typography;
 
 export default () => {
 
+  const layout = {
+    labelCol: { span: 8 },
+    wrapperCol: { span: 16 },
+  };
+
   return (
     <div>
       <div><img src={hezuo} alt={'联系我们'}/></div>
@@ -52,6 +57,7 @@ export default () => {
         <Col xs={24} xl={9}>
           <div style={{ border: '1px solid #000', padding: 20 }}>
             <Form
+              {...layout}
               size={'small'}
               name="contact"
               // onFinish={onFinish}
