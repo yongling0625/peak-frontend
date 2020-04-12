@@ -1,6 +1,6 @@
 export default {
   treeShaking: true,
-  hash: false,
+  hash: true,
   targets: {
     ie: 11,
   },
