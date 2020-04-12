@@ -1,5 +1,9 @@
 export default {
   treeShaking: true,
+  hash: false,
+  targets: {
+    ie: 11,
+  },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
