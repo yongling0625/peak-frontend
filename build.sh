@@ -1,3 +1,4 @@
+rm -rf ./dist
 git pull
 yarn
 npm run build-prod
