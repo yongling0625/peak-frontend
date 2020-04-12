@@ -47,9 +47,9 @@ export default () => {
               <Map
                 plugins={['ToolBar']}
                 center={{ longitude: 116.718139, latitude: 39.532615 }}
-                zoom={6}
+                zoom={11}
               >
-                <Marker title={'廊坊市广用自动化设备有限公司'} position={{ longitude: 116.718103, latitude: 39.532629 }}/>
+                <Marker label={{content:'廊坊市广用自动化设备有限公司'}} position={{ longitude: 116.718103, latitude: 39.532629 }}/>
               </Map>
             </div>
           </div>
@@ -60,8 +60,6 @@ export default () => {
               {...layout}
               size={'small'}
               name="contact"
-              // onFinish={onFinish}
-              // onFinishFailed={}
               scrollToFirstError
             >
               <Form.Item
