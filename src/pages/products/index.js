@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'dva';
 import { Row, Col, List } from 'antd';
-import styles from './index.less';
 import { Link } from 'umi';
+import styles from './index.less';
 
 export default connect(({ products, loading }) => ({
   products: products.products,

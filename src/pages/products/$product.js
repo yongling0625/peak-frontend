@@ -3,9 +3,6 @@ import { connect } from 'dva';
 import {  Col, Row, Pagination } from 'antd';
 import { Document, Page } from 'react-pdf';
 
-import pdf01 from '@/assets/pdf/AP-CH.pdf';
-
-
 export default connect(({ products, loading }) => ({
   product: products.product,
   submitting: loading.effects['products/fetchProduct'],
@@ -36,7 +33,7 @@ export default connect(({ products, loading }) => ({
         </p>
         <div>
           <Document
-            file={pdf01}
+            file={product.pdf}
             onLoadSuccess={pdf => setNumPages(pdf.numPages)}
           >
             <Page pageNumber={pageNumber}/>

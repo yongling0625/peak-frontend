@@ -1,7 +1,8 @@
 import React from 'react';
-import { Row, Col, Card, Typography } from 'antd';
-import new01 from '@/assets/images/news01.jpg';
-import new02 from '@/assets/images/news02.jpg';
+import { Row, Col, Typography } from 'antd';
+import { Link } from 'umi';
+import newsheader from '@/assets/images/news/newsheader.jpg';
+import new01 from '@/assets/images/news/news01.png';
 
 const { Title, Paragraph } = Typography;
 
@@ -9,18 +10,18 @@ export default () => {
   return (
     <div>
       <div>
-        <img src={new01}/>
+        <img src={newsheader}/>
       </div>
       <div>
         <Row style={{marginTop: 20}}>
-          <Col xs={10} xl={4}>
-            <img src={new02}/>
+          <Col xs={10} xl={{span:4 ,offset: 2}}>
+            <Link to={'/news/1'}><img src={new01}/></Link>
           </Col>
-          <Col xs={14} xl={20}>
+          <Col xs={14} xl={16}>
             <Typography>
-              <Title level={4}>聊城市委副书记、代市长李长萍一行莅临公司参观指导</Title>
+              <Link to={'/news/1'}><Title level={4}>关于APEX减速机噪音的分析，你了解吗？</Title></Link>
               <Paragraph>
-                廊坊市广用自动化设备有限公司专业服务于自动化领域，从事自动化产品的技术支持和销售。公司本着为用户提供理想服务的原则，建立了优秀的销售队伍、完善的服务体系，为国内众多用户提供了优质的产品和良好的服务。
+                行星减速机是齿轮啮合运转，所以齿轮与齿轮的摩擦、与油封的摩擦、轴承的运转都会有噪音出现，所以每个减速机的制造厂家都有噪音值标准，正常情况下，噪音值在 80 分贝以内.
               </Paragraph>
             </Typography>
           </Col>
