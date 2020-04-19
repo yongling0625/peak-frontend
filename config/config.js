@@ -10,7 +10,7 @@ export default {
       antd: true,
       dva: true,
       dynamicImport: { webpackChunkName: true },
-      title: 'peak-frontend',
+      title: '广用科技',
       dll: true,
       locale: {
         enable: true,
