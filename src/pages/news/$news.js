@@ -14,7 +14,7 @@ export default () => {
   return (
     <div style={{padding:10}}>
       <Typography>
-        <Title level={2}>关于APEX减速机噪音的分析，你了解吗？</Title>
+        <Title level={2}>关于行星减速机噪音的分析，你了解吗？</Title>
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
             <img src={new01}/>
