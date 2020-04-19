@@ -19,7 +19,7 @@ export default () => {
           </Col>
           <Col xs={14} xl={16}>
             <Typography>
-              <Link to={'/news/1'}><Title level={4}>关于APEX减速机噪音的分析，你了解吗？</Title></Link>
+              <Link to={'/news/1'}><Title level={4}>关于行星减速机噪音的分析，你了解吗？</Title></Link>
               <Paragraph>
                 行星减速机是齿轮啮合运转，所以齿轮与齿轮的摩擦、与油封的摩擦、轴承的运转都会有噪音出现，所以每个减速机的制造厂家都有噪音值标准，正常情况下，噪音值在 80 分贝以内.
               </Paragraph>
