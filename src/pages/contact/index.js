@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'dva';
 import {
   Row,
   Col,
@@ -14,11 +15,21 @@ import hezuo from '@/assets/images/hezuo.jpg';
 
 const { Title, Paragraph } = Typography;
 
-export default () => {
+export default connect()(props => {
+
+  const { dispatch } = props;
 
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
+  };
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    dispatch({
+      type: 'contact/submitContact',
+      payload: values,
+    });
   };
 
   return (
@@ -35,7 +46,7 @@ export default () => {
       </Row>
       <Row gutter={[24, 24]} style={{ padding: 5 }}>
         <Col xs={24} xl={{ span: 7, offset: 5 }}>
-          <div style={{ border: '1px solid #000', padding: 10}}>
+          <div style={{ border: '1px solid #000', padding: 10 }}>
             <Paragraph strong>廊坊市广用自动化设备有限公司</Paragraph>
             <Paragraph strong>地址：廊坊市广阳区春和花园南区8-2-202</Paragraph>
             <Paragraph strong>邮编：065000</Paragraph>
@@ -43,13 +54,14 @@ export default () => {
             <Paragraph strong>手机：18103122872</Paragraph>
             <Paragraph strong>E-MAIL：<a href="mailto:lfguangyong@163.com">lfguangyong@163.com</a></Paragraph>
             <Paragraph strong>网址：<a href="http://www.gy-peak.cn">www.gy-peak.cn</a></Paragraph>
-            <div style={{ width: 380, height: 300 ,margin:'0 auto'}}>
+            <div style={{ width: 380, height: 300, margin: '0 auto' }}>
               <Map
                 plugins={['ToolBar']}
                 center={{ longitude: 116.718139, latitude: 39.532615 }}
                 zoom={11}
               >
-                <Marker label={{content:'廊坊市广用自动化设备有限公司'}} position={{ longitude: 116.718103, latitude: 39.532629 }}/>
+                <Marker label={{ content: '廊坊市广用自动化设备有限公司' }}
+                        position={{ longitude: 116.718103, latitude: 39.532629 }}/>
               </Map>
             </div>
           </div>
@@ -58,8 +70,10 @@ export default () => {
           <div style={{ border: '1px solid #000', padding: 20 }}>
             <Form
               {...layout}
+              form={form}
               size={'small'}
               name="contact"
+              onFinish={onFinish}
               scrollToFirstError
             >
               <Form.Item
@@ -187,4 +201,4 @@ export default () => {
       </Row>
     </div>
   );
-}
+});

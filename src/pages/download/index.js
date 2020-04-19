@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'dva';
 import { Row, Col, List, Typography } from 'antd';
-import { Link } from 'umi';
 
 const { Title } = Typography;
 

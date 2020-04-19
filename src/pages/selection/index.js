@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'dva';
 import {
   Row,
   Col,
@@ -8,17 +9,28 @@ import {
   Button,
 } from 'antd';
 
-export default () => {
+export default connect()(props => {
+
+  const { dispatch } = props;
 
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
   };
 
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    dispatch({
+      type: 'selection/submitSelection',
+      payload: values
+    });
+  };
+
   return (
     <>
       <Row>
-        <Col  xs={24} xl={{ span: 10, offset: 7 }}>
+        <Col xs={24} xl={{ span: 10, offset: 7 }}>
           <div style={{ marginTop: 20, backgroundColor: 'red' }}>
             <p>烦请您填写以下资料，方便技术人员跟您联系，谢谢！</p>
           </div>
@@ -29,10 +41,10 @@ export default () => {
           <div style={{ border: '1px solid #000', padding: 20 }}>
             <Form
               {...layout}
+              form={form}
               size={'small'}
               name={'selection'}
-              // onFinish={onFinish}
-              // onFinishFailed={}
+              onFinish={onFinish}
               scrollToFirstError
             >
               <Form.Item
@@ -159,4 +171,4 @@ export default () => {
       </Row>
     </>
   );
-}
+});
