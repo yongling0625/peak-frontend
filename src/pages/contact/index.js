@@ -51,7 +51,7 @@ export default connect()(props => {
             <Paragraph strong>地址：廊坊市广阳区春和花园南区8-2-202</Paragraph>
             <Paragraph strong>邮编：065000</Paragraph>
             <Paragraph strong>电话：0316-5176208</Paragraph>
-            <Paragraph strong>手机：18103122872</Paragraph>
+            <Paragraph strong>手机：13292669905</Paragraph>
             <Paragraph strong>E-MAIL：<a href="mailto:lfguangyong@163.com">lfguangyong@163.com</a></Paragraph>
             <Paragraph strong>网址：<a href="http://www.gy-peak.cn">www.gy-peak.cn</a></Paragraph>
             <div style={{ width: 300, height: 300, margin: '0 auto' }}>
