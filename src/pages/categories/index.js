@@ -40,16 +40,16 @@ export default () => {
       'id': 6,
       'img': cate_tbddg,
       'title': '同步电动缸',
-    }
-    , {
+    },
+    {
       'id': 7,
-      'img': cate_fjgj,
-      'title': '附件工具',
+      'img': cate_zhmj,
+      'title': '组合模组',
     },
     {
       'id': 8,
-      'img': cate_zhmj,
-      'title': '组合模组',
+      'img': cate_fjgj,
+      'title': '附件工具',
     },
   ];
 
