@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Typography } from 'antd';
+import { Row, Col, Typography, Button } from 'antd';
 import { Link } from 'umi';
 import newsheader from '@/assets/images/news/newsheader.jpg';
 import new01 from '@/assets/images/news/news01.png';
@@ -24,6 +24,7 @@ export default () => {
                 行星减速机是齿轮啮合运转，所以齿轮与齿轮的摩擦、与油封的摩擦、轴承的运转都会有噪音出现，所以每个减速机的制造厂家都有噪音值标准，正常情况下，噪音值在 80 分贝以内.
               </Paragraph>
             </Typography>
+            <Button type="dashed" size={'large'}><a href={'/news/1'}>查看详细</a></Button>
           </Col>
         </Row>
       </div>
