@@ -101,7 +101,7 @@ export default () => {
                 <Button type="dashed" size={'large'}><a href={'/categories/1'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={2} style={{
+            <Col xs={2} xl={1} style={{
               backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
@@ -109,9 +109,12 @@ export default () => {
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={5} style={{
+            <Col xs={0} xl={6} style={{
               backgroundColor: 'rgb(51, 51, 51)',
-            }}>>
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
               <img src={cate_clct}/>
             </Col>
           </Row>
@@ -138,7 +141,7 @@ export default () => {
                 <Button type="dashed" ghost size={'large'}><a href={'/categories/2'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={2} style={{
+            <Col xs={2} xl={1} style={{
               backgroundColor: 'rgb(51, 51, 51)',
               display: 'flex',
               alignItems: 'center',
@@ -146,8 +149,11 @@ export default () => {
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={5} style={{
+            <Col xs={0} xl={6} style={{
               backgroundColor: 'rgb(244, 244, 244)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}>
               <img src={cate_lxsjj}/>
             </Col>
@@ -173,7 +179,7 @@ export default () => {
                 <Button type="dashed" size={'large'}><a href={'/categories/3'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={2} style={{
+            <Col xs={2} xl={1} style={{
               backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
@@ -181,7 +187,12 @@ export default () => {
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={5} style={{ backgroundColor: 'rgb(51, 51, 51)' }}>
+            <Col xs={0} xl={6} style={{
+              backgroundColor: 'rgb(51, 51, 51)' ,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
               <img src={cate_dzcl}/>
             </Col>
           </Row>
@@ -207,7 +218,7 @@ export default () => {
                 <Button type="dashed" ghost size={'large'}><a href={'/categories/4'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={2} style={{
+            <Col xs={2} xl={1} style={{
               backgroundColor: 'rgb(51, 51, 51)',
               display: 'flex',
               alignItems: 'center',
@@ -215,7 +226,12 @@ export default () => {
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={5} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
+            <Col xs={0} xl={6} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
               <img src={cate_jsj}/>
             </Col>
           </Row>
