@@ -82,44 +82,49 @@ export default () => {
       <Carousel dots={false} ref={carouselRef}>
         <div>
           <Row>
-            <Col xs={11} xl={6}>
+            <Col xs={11} xl={8} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
+            }}>
               <img src={cate_jsj}/>
             </Col>
-            <Col xs={11} xl={10} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              color: '#f4f4f4',
+            <Col xs={11} xl={9} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               <div>
-                <p>减速机</p>
+                <h2>减速机</h2>
                 <p className={styles.indent}>
                   减速机产品是针对高性能的设备需求来设计，当需要将马达转速降低，输出扭矩提高且完整的将动力传送至应用端，这时您会需要我们的减速机来达成您的要求。
                 </p>
-                <Button type="dashed" ghost size={'large'}><a href={'/categories/1'}>查看更多</a></Button>
+                <Button type="dashed" size={'large'}><a href={'/categories/1'}>查看更多</a></Button>
               </div>
             </Col>
             <Col xs={2} xl={2} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
+              backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={6}>
+            <Col xs={0} xl={5} style={{
+              backgroundColor: 'rgb(51, 51, 51)',
+            }}>>
               <img src={cate_clct}/>
             </Col>
           </Row>
         </div>
         <div className={styles.categoryCarousel}>
           <Row>
-            <Col xs={11} xl={6}>
+            <Col xs={11} xl={8} style={{
+              backgroundColor: 'rgb(51, 51, 51)',
+            }}>
               <img src={cate_clct}/>
             </Col>
-            <Col xs={11} xl={10} style={{
-              backgroundColor: '#89C3EB',
+            <Col xs={11} xl={9} style={{
+              backgroundColor: 'rgb(51, 51, 51)',
               color: '#f4f4f4',
               display: 'flex',
               alignItems: 'center',
@@ -134,26 +139,27 @@ export default () => {
               </div>
             </Col>
             <Col xs={2} xl={2} style={{
-              backgroundColor: '#89C3EB',
+              backgroundColor: 'rgb(51, 51, 51)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={6}>
+            <Col xs={0} xl={5} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
+            }}>
               <img src={cate_lxsjj}/>
             </Col>
           </Row>
         </div>
         <div className={styles.categoryCarousel}>
           <Row>
-            <Col xs={11} xl={6}>
+            <Col xs={11} xl={8} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
               <img src={cate_lxsjj}/>
             </Col>
-            <Col xs={11} xl={10} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              color: '#f4f4f4',
+            <Col xs={11} xl={9} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -164,29 +170,29 @@ export default () => {
                   开发至今也已21年，深受各界的好评；为提升此项产品且未来公司也备有自组自产( 高
                   速螺纹旋削机)来因应客户行程长短不一要求；以快速製造、组装交货。本公司更依此提升生产效率、降低成本，并在外螺纹与内螺帽的组合上，得到低背隙的精度要求以达品质保证。
                 </p>
-                <Button type="dashed" ghost size={'large'}><a href={'/categories/3'}>查看更多</a></Button>
+                <Button type="dashed" size={'large'}><a href={'/categories/3'}>查看更多</a></Button>
               </div>
             </Col>
             <Col xs={2} xl={2} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
+              backgroundColor: 'rgb(244, 244, 244)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={6}>
+            <Col xs={0} xl={5} style={{ backgroundColor: 'rgb(51, 51, 51)' }}>
               <img src={cate_dzcl}/>
             </Col>
           </Row>
         </div>
         <div className={styles.categoryCarousel}>
           <Row>
-            <Col xs={11} xl={6}>
+            <Col xs={11} xl={8} style={{ backgroundColor: 'rgb(51, 51, 51)' }}>
               <img src={cate_dzcl}/>
             </Col>
-            <Col xs={11} xl={10} style={{
-              backgroundColor: '#89C3EB',
+            <Col xs={11} xl={9} style={{
+              backgroundColor: 'rgb(51, 51, 51)',
               color: '#f4f4f4',
               display: 'flex',
               alignItems: 'center',
@@ -202,14 +208,14 @@ export default () => {
               </div>
             </Col>
             <Col xs={2} xl={2} style={{
-              backgroundColor: '#89C3EB',
+              backgroundColor: 'rgb(51, 51, 51)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               {next_button}
             </Col>
-            <Col xs={0} xl={6}>
+            <Col xs={0} xl={5} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
               <img src={cate_jsj}/>
             </Col>
           </Row>
@@ -218,7 +224,7 @@ export default () => {
 
       <Divider/>
 
-      <div><Title level={3}>产品资讯</Title></div>
+      <div><Title level={3}>新闻资讯</Title></div>
       <div>
         <Row style={{ marginTop: 20 }}>
           <Col xs={10} xl={{ span: 4, offset: 2 }}>
