@@ -20,6 +20,26 @@ export default connect(({ download, loading }) => ({
     });
   }, []);
 
+  function showPdf(product) {
+    if (product.pdf) {
+      return (
+        <List.Item>
+          <a target={'_blank'} href={product.pdf}>
+            <img src={product.img} alt={product.title}/>
+            <p>{product.title}</p>
+          </a>
+        </List.Item>
+      );
+    } else {
+      return (
+        <List.Item>
+          <img src={product.img} alt={product.title}/>
+          <p>{product.title}</p>
+        </List.Item>
+      );
+    }
+  }
+
 
   return (
     <Row gutter={[32, 32]} style={{ marginTop: 20 }}>
@@ -32,10 +52,10 @@ export default connect(({ download, loading }) => ({
           dataSource={download}
           renderItem={item => (
             <List.Item>
-              <Title level={4}>{item.categoryName}</Title>
+              <Title level={2}>{item.categoryName}</Title>
               <List
                 grid={{
-                  gutter: [24, 16],
+                  gutter: [48, 16],
                   xs: 3,
                   sm: 3,
                   md: 4,
@@ -45,12 +65,7 @@ export default connect(({ download, loading }) => ({
                 }}
                 dataSource={item.products}
                 renderItem={product => (
-                  <List.Item>
-                    <a target={'_blank'} href={product.pdf}>
-                      <img src={product.img} alt={product.title}/>
-                      <p>{product.title}</p>
-                    </a>
-                  </List.Item>
+                  showPdf(product)
                 )}
               />
             </List.Item>

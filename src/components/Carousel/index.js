@@ -8,7 +8,9 @@ import carousel04 from '@/assets/images/carousel/carousel04.jpg';
 import styles from './index.less';
 
 export default () => {
+
   const carouselRef = useRef();
+
   return (
     <div style={{position: 'relative'}}>
       <Carousel
@@ -19,19 +21,19 @@ export default () => {
       >
         <div>
           <img src={carousel02}/>
-          <div className={styles.img_center}>精密传动解决方案提供商</div>
+          <div className={styles.img_center_blue}>精密传动解决方案提供商</div>
         </div>
         <div>
           <img src={carousel01}/>
-          <div className={styles.img_center}>专业齿轮定制 满足客户个性化需求</div>
+          <div className={styles.img_center_white}>专业齿轮定制 满足客户个性化需求</div>
         </div>
         <div>
           <img src={carousel03}/>
-          <div className={styles.img_center}>智慧型润滑系统 最多可支持40个润滑点</div>
+          <div className={styles.img_center_blue}>智慧型润滑系统 最多可支持40个润滑点</div>
         </div>
         <div>
           <img src={carousel04}/>
-          <div className={styles.img_center}>多点同步XYZ组合模组</div>
+          <div className={styles.img_center_blue}>多点同步XYZ组合模组</div>
         </div>
       </Carousel>
       <LeftCircleOutlined className={styles.prev} onClick={() => carouselRef.current.prev()}/>

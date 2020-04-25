@@ -10,6 +10,7 @@ import cate_lxsjj from '@/assets/images/category/cate_lxsjj.png';
 import cate_tbddg from '@/assets/images/category/cate_tbddg.jpg';
 import cate_fjgj from '@/assets/images/category/cate_fjgj.png';
 import cate_zhmj from '@/assets/images/category/cate_zhmj.jpg';
+import fastClick from 'umi-plugin-react/lib/plugins/fastClick';
 
 
 export default props => {
@@ -19,6 +20,7 @@ export default props => {
   let category_title;
   let category_img;
   let category_feature;
+  let has_product = true;
 
   const jsj_feature = ['任意方向使用', '易于安装', '高转入转速', '高输出扭矩密度', '低背隙', '免维护', '较低噪音', '较低震动', '使用寿命长', '优良之抗性'];
   const clct_feature = ['高精密度', '高负载', '高速度', '低噪音', '长使用寿命', '快速交货'];
@@ -63,14 +65,16 @@ export default props => {
       category_feature = tbddg_feature;
       break;
     case '7':
-      category_title = '附件工具';
-      category_img = cate_fjgj;
-      category_feature = fjgj_feature;
-      break;
-    case '8':
       category_title = '组合模组';
       category_img = cate_zhmj;
       category_feature = zhmz_feature;
+      has_product = false;
+      break;
+    case '8':
+      category_title = '附件工具';
+      category_img = cate_fjgj;
+      category_feature = fjgj_feature;
+      has_product = false;
       break;
   }
 

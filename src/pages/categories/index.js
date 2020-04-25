@@ -56,9 +56,9 @@ export default () => {
 
   return (
     <List
-      style={{ marginTop: 20, padding: 20 }}
+      style={{ marginTop: 20, padding: 30 }}
       grid={{
-        gutter: 32,
+        gutter: [40,48],
         xs: 2,
         sm: 2,
         md: 3,

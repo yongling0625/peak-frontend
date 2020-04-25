@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'dva';
-import {  Col, Row, Pagination } from 'antd';
+import { Col, Row, Pagination } from 'antd';
 import { Document, Page } from 'react-pdf';
 
 export default connect(({ products, loading }) => ({
@@ -26,11 +26,11 @@ export default connect(({ products, loading }) => ({
 
   return (
     <Row style={{ marginTop: 20, padding: 10 }}>
-      <Col xs={24} xl={{span:12, offset:6}}>
-        <p>
-          <Pagination simple current={pageNumber} total={numPages}
+      <Col xs={24} xl={{ span: 12, offset: 6 }}>
+        <div style={{ marginBottom: 20 }}>
+          <Pagination current={pageNumber} total={numPages}
                       onChange={(page) => setPageNumber(page)}/>
-        </p>
+        </div>
         <div>
           <Document
             file={product.pdf}
@@ -39,10 +39,10 @@ export default connect(({ products, loading }) => ({
             <Page pageNumber={pageNumber}/>
           </Document>
         </div>
-        <p style={{ marginTop: 20 }}>
-          <Pagination simple current={pageNumber} total={numPages}
+        <div style={{ marginTop: 20 }}>
+          <Pagination current={pageNumber} total={numPages}
                       onChange={(page) => setPageNumber(page)}/>
-        </p>
+        </div>
       </Col>
     </Row>
   );
