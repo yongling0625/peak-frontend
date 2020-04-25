@@ -63,13 +63,13 @@ export default () => {
           <Col xs={24} xl={12} style={{
             color: '#f41d23',
           }}>
-            <GlobalOutlined style={{fontSize: '2vw'}}/><p>愿景</p>
+            <GlobalOutlined style={{ fontSize: '2vw' }}/><p>愿景</p>
             <p>成为最优秀的精密传动解决方案提供商</p>
           </Col>
           <Col xs={24} xl={12} style={{
             color: '#f41d23',
           }}>
-            <GoldOutlined style={{fontSize: '2vw'}}/>
+            <GoldOutlined style={{ fontSize: '2vw' }}/>
             <p>使命</p>
             <p>聚焦客户需求、提供高效解决方案、创造最大价值、实现共同发展</p>
           </Col>
@@ -86,6 +86,9 @@ export default () => {
           <Row>
             <Col xs={11} xl={8} style={{
               backgroundColor: 'rgb(244, 244, 244)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}>
               <img src={cate_jsj}/>
             </Col>
@@ -121,10 +124,13 @@ export default () => {
             </Col>
           </Row>
         </div>
-        <div className={styles.categoryCarousel}>
+        <div>
           <Row>
             <Col xs={11} xl={8} style={{
               backgroundColor: 'rgb(51, 51, 51)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}>
               <img src={cate_clct}/>
             </Col>
@@ -136,7 +142,7 @@ export default () => {
               justifyContent: 'center',
             }}>
               <div>
-                <h1 style={{color:'#f4f4f4'}}><strong>齿轮齿条</strong></h1>
+                <h1 style={{ color: '#f4f4f4' }}><strong>齿轮齿条</strong></h1>
                 <p className={styles.indent}>
                   齿条的功能已经从单纯的位移或动力传输转换到精确定位。应用高精度齿条，即使没有光栅尺也能精确定位。APEX齿条是全世界唯一一个严格按照规范生产齿排的制造商。所有的品质规范都是为了达到：高定位精度、承受高扭矩、高速度且低噪音运转。APEX也是全世界唯一能自己设计和生产齿排、齿轮和减速机的领导品牌，并提供良好协调的高品质传动组件，以满足不同的工业需求。
                 </p>
@@ -161,9 +167,14 @@ export default () => {
             </Col>
           </Row>
         </div>
-        <div className={styles.categoryCarousel}>
+        <div>
           <Row>
-            <Col xs={11} xl={8} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
+            <Col xs={11} xl={8} style={{
+              backgroundColor: 'rgb(244, 244, 244)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
               <img src={cate_lxsjj}/>
             </Col>
             <Col xs={11} xl={9} style={{
@@ -199,9 +210,14 @@ export default () => {
             </Col>
           </Row>
         </div>
-        <div className={styles.categoryCarousel}>
+        <div>
           <Row>
-            <Col xs={11} xl={8} style={{ backgroundColor: 'rgb(51, 51, 51)' }}>
+            <Col xs={11} xl={8} style={{
+              backgroundColor: 'rgb(51, 51, 51)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
               <img src={cate_dzcl}/>
             </Col>
             <Col xs={11} xl={9} style={{
@@ -212,7 +228,7 @@ export default () => {
               justifyContent: 'center',
             }}>
               <div>
-                <h1 style={{color:'#f4f4f4'}}><strong>定制齿轮</strong></h1>
+                <h1 style={{ color: '#f4f4f4' }}><strong>定制齿轮</strong></h1>
                 <p className={styles.indent}>
                   因应客户高品质的要求，从车床、铣床、磨床、滚齿、热处理，到最后的精密研磨制程，我们的持续努力已将齿轮产品推向世界最顶级的品质。公司先进的设备不但具有超精密的齿面加工能力，对于复杂多元的齿形变化及各种齿形修正都有特殊的加工技术。加工模数可从3.5~50。齿轮研磨精度可达世界最高DIN
                   1级。此外，对于金属材料，热处理及其他相关加工技术亦有长期深入的研究，配合多年来齿轮制造的实务经验与严格的品质监控系统，深信是您选购齿轮系列产品的最佳选择。

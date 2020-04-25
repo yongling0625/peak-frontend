@@ -25,7 +25,7 @@ export default connect(({ products, loading }) => ({
 
   return (
     <Row style={{ marginTop: 20, padding: 10 }}>
-      <Col xs={{ span: 20, offset: 2 }} xl={{ span: 20, offset: 2 }}>
+      <Col xs={24} xl={{ span: 20, offset: 2 }}>
         <List
           grid={{
             gutter: [40, 24],
