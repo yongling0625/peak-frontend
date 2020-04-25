@@ -1,4 +1,4 @@
-import { List, Card } from 'antd';
+import { List, Card, Col, Row } from 'antd';
 import { Link } from 'umi';
 import cate_jsj from '@/assets/images/category/cate_jsj.png';
 import cate_clct from '@/assets/images/category/cate_clct.png';
@@ -8,6 +8,7 @@ import cate_lxsjj from '@/assets/images/category/cate_lxsjj.png';
 import cate_tbddg from '@/assets/images/category/cate_tbddg.jpg';
 import cate_fjgj from '@/assets/images/category/cate_fjgj.png';
 import cate_zhmj from '@/assets/images/category/cate_zhmj.jpg';
+import React from 'react';
 
 const { Meta } = Card;
 
@@ -55,31 +56,34 @@ export default () => {
 
 
   return (
-    <List
-      style={{ marginTop: 20, padding: 30 }}
-      grid={{
-        gutter: [40,48],
-        xs: 2,
-        sm: 2,
-        md: 3,
-        lg: 4,
-        xl: 4,
-        xxl: 4,
-      }}
-      dataSource={categories}
-      renderItem={category => (
-        <List.Item>
-          <Link to={`/categories/${category.id}`}>
-            <Card
-              hoverable
-              size={'small'}
-              cover={<img alt={category.title} src={category.img}/>}
-            >
-              <Meta title={category.title}/>
-            </Card>
-          </Link>
-        </List.Item>
-      )}
-    />
+    <Row style={{ marginTop: 20, padding: 10 }}>
+      <Col xs={{ span: 24}} xl={{ span: 20, offset: 2 }}>
+        <List
+          grid={{
+            gutter: [40, 48],
+            xs: 2,
+            sm: 2,
+            md: 3,
+            lg: 4,
+            xl: 4,
+            xxl: 4,
+          }}
+          dataSource={categories}
+          renderItem={category => (
+            <List.Item>
+              <Link to={`/categories/${category.id}`}>
+                <Card
+                  hoverable
+                  size={'small'}
+                  cover={<img alt={category.title} src={category.img}/>}
+                >
+                  <Meta title={category.title}/>
+                </Card>
+              </Link>
+            </List.Item>
+          )}
+        />
+      </Col>
+    </Row>
   );
 }

@@ -24,7 +24,7 @@ export default connect(({ download, loading }) => ({
     if (product.pdf) {
       return (
         <List.Item>
-          <a target={'_blank'} href={product.pdf}>
+          <a download={product.title} href={product.pdf}>
             <img src={product.img} alt={product.title}/>
             <p>{product.title}</p>
           </a>
