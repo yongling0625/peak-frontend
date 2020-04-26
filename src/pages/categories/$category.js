@@ -4,13 +4,12 @@ import { Link } from 'umi';
 import { DownOutlined } from '@ant-design/icons';
 import cate_jsj from '@/assets/images/category/cate_jsj.png';
 import cate_clct from '@/assets/images/category/cate_clct.png';
-import cate_rhxt from '@/assets/images/category/cate_rhxt.jpg';
+import cate_rhxt from '@/assets/images/category/cate_rhxt.png';
 import cate_dzcl from '@/assets/images/category/cate_dzcl.png';
 import cate_lxsjj from '@/assets/images/category/cate_lxsjj.png';
-import cate_tbddg from '@/assets/images/category/cate_tbddg.jpg';
+import cate_tbddg from '@/assets/images/category/cate_tbddg.PNG';
 import cate_fjgj from '@/assets/images/category/cate_fjgj.png';
-import cate_zhmj from '@/assets/images/category/cate_zhmj.jpg';
-import fastClick from 'umi-plugin-react/lib/plugins/fastClick';
+import cate_zhmj from '@/assets/images/category/cate_zhmj.png';
 
 
 export default props => {
