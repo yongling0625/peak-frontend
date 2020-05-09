@@ -62,11 +62,11 @@ export default connect(({ products, loading }) => ({
           <Button type="primary" block href={'/selection'} ghost>立即咨询</Button>
         </Col>
         <Col xs={12} xl={{ span: 8 }}>
-          <Button type="primary" block>拨打电话</Button>
+          <Button type="primary" block href={'tel:13292669905'}>拨打电话</Button>
         </Col>
       </Row>
       <Divider/>
-      <Tabs defaultActiveKey="1" type="card" size={'large'} tabBarGutter={56}>
+      <Tabs defaultActiveKey="1" type="card" size={'large'} tabBarGutter={40}>
         <TabPane tab="产品特点" key="1">
           <Row>
             <Col xs={{ span: 22, offset: 1 }} xl={{ span: 16, offset: 4 }}>
