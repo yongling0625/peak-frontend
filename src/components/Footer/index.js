@@ -17,13 +17,15 @@ export default () => {
           <p>电话：0316-5176208</p>
         </div>
       </Col>
-      <Col xs={24} xl={{ span: 7 }}>
-        <div style={{ position: 'relative', height: '100%', marginTop: 5 }}>
-          <div style={{ position: 'absolute', left: '15%', bottom: '5%' }}>
+      <Col xs={24} xl={{ span: 7 }} style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <p>
             Copyright ©2020.GUANGYONG TECH
             <a href={'http://www.beian.miit.gov.cn/'}>冀ICP备17001268号</a>
-          </div>
-        </div>
+        </p>
       </Col>
       <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 3 }} style={{ marginTop: 5 }}>
         <span>微信公众号</span>
