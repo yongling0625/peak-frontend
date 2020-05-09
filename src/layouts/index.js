@@ -19,7 +19,7 @@ export default (props) => {
   return (
     <Layout className={styles.normal}>
       <Header/>
-      <Content className={styles.layoutContent} style={{ minHeight: 380 }}>
+      <Content style={{ minHeight: '100%' }}>
         {props.children}
       </Content>
       <Footer/>

@@ -113,5 +113,5 @@ const download = {
 };
 
 export default {
-  'GET /api/download': download,
+  'GET /api/products/category': download,
 };

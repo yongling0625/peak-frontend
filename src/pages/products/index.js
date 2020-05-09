@@ -39,7 +39,7 @@ export default connect(({ products, loading }) => ({
           dataSource={products.records}
           renderItem={item => (
             <List.Item>
-              <a target={'_blank'} href={item.pdf}>
+              <Link to={`/products/${item.id}`}>
                 <Card
                   hoverable
                   size={'small'}
@@ -47,7 +47,7 @@ export default connect(({ products, loading }) => ({
                 >
                   <Meta title={item.title}/>
                 </Card>
-              </a>
+              </Link>
             </List.Item>
           )}
         />

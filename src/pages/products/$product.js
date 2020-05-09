@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'dva';
-import { Col, Row, Pagination } from 'antd';
-import { Document, Page } from 'react-pdf';
+import { Col, Row, Carousel, Typography, Button, Divider, Tabs } from 'antd';
+import _ from 'lodash';
+
+const { Paragraph, Title } = Typography;
+const { TabPane } = Tabs;
 
 export default connect(({ products, loading }) => ({
   product: products.product,
@@ -10,9 +13,6 @@ export default connect(({ products, loading }) => ({
 
   const { dispatch, match, product } = props;
   const productId = match.params.product;
-
-  const [pageNumber, setPageNumber] = useState(1);
-  const [numPages, setNumPages] = useState(null);
 
   /**
    * constructor
@@ -24,26 +24,75 @@ export default connect(({ products, loading }) => ({
     });
   }, []);
 
+
   return (
-    <Row style={{ marginTop: 20, padding: 10 }}>
-      <Col xs={24} xl={{ span: 12, offset: 6 }}>
-        <div style={{ marginBottom: 20 }}>
-          <Pagination current={pageNumber} total={numPages}
-                      onChange={(page) => setPageNumber(page)}/>
-        </div>
-        <div>
-          <Document
-            file={product.pdf}
-            onLoadSuccess={pdf => setNumPages(pdf.numPages)}
-          >
-            <Page pageNumber={pageNumber}/>
-          </Document>
-        </div>
-        <div style={{ marginTop: 20 }}>
-          <Pagination current={pageNumber} total={numPages}
-                      onChange={(page) => setPageNumber(page)}/>
-        </div>
-      </Col>
-    </Row>
+    <div>
+
+      <Row style={{ marginTop: 20, padding: 10 }}>
+        <Col xs={24} xl={{ span: 16, offset: 4 }}>
+          <Carousel autoplay={true} autoplaySpeed={3000}>
+            {
+              product.categoryImgList && _.map(product.categoryImgList, img => {
+                return (
+                  <div key={_.uniqueId()}>
+                    <img src={img} alt={''}/>
+                  </div>
+                );
+              })
+            }
+          </Carousel>
+        </Col>
+      </Row>
+      <Row style={{ marginTop: 20, padding: 10 }}>
+        <Col xs={24} xl={{ span: 16, offset: 4 }}>
+          <div style={{ textAlign: 'left' }}>
+            <Title>{product.title}</Title>
+            <Paragraph>{product.synopsis}</Paragraph>
+            <Paragraph>编号：{product.number}</Paragraph>
+            <Paragraph>型号：{product.model}</Paragraph>
+            <Paragraph>品牌：{product.brand}</Paragraph>
+            <Paragraph>货期：{product.deliveryType}</Paragraph>
+            <Paragraph>服务：{product.afterSaleService}</Paragraph>
+          </div>
+        </Col>
+      </Row>
+
+      <Row gutter={{ xs: 8, xl: 16 }} style={{ marginTop: 20, padding: 10 }}>
+        <Col xs={12} xl={{ span: 8, offset: 4 }}>
+          <Button type="primary" block href={'/selection'} ghost>立即咨询</Button>
+        </Col>
+        <Col xs={12} xl={{ span: 8 }}>
+          <Button type="primary" block>拨打电话</Button>
+        </Col>
+      </Row>
+      <Divider/>
+      <Tabs defaultActiveKey="1" type="card" size={'large'} tabBarGutter={56}>
+        <TabPane tab="产品特点" key="1">
+          <Row>
+            <Col xs={{ span: 22, offset: 1 }} xl={{ span: 16, offset: 4 }}>
+              {
+                product.featuresImgList && _.map(product.featuresImgList, img =>
+                  <img src={img} alt={''}/>,
+                )
+              }
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tab="详细规格" key="2">
+          <Row>
+            <Col xs={{ span: 22, offset: 1 }} xl={{ span: 16, offset: 4 }}>
+              {
+                product.specificationsImgList && _.map(product.specificationsImgList, img =>
+                  <img src={img} alt={''}/>,
+                )
+              }
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tab="产品尺寸" key="3">
+          Content of card tab 3
+        </TabPane>
+      </Tabs>
+    </div>
   );
 });

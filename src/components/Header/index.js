@@ -5,7 +5,7 @@ import React from 'react';
 export default () => {
   return (
     <Menu
-      style={{lineHeight:5}}
+      style={{ lineHeight: 5 }}
       theme="dark"
       mode={'horizontal'}>
       <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
