@@ -48,7 +48,6 @@ export default connect(({ products, loading }) => ({
           <div style={{ textAlign: 'left' }}>
             <Title>{product.title}</Title>
             <Paragraph>{product.synopsis}</Paragraph>
-            <Paragraph>编号：{product.number}</Paragraph>
             <Paragraph>型号：{product.model}</Paragraph>
             <Paragraph>品牌：{product.brand}</Paragraph>
             <Paragraph>货期：{product.deliveryType}</Paragraph>
