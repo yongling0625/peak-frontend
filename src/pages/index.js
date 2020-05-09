@@ -20,7 +20,7 @@ export default () => {
   const [headerStyle, setHeaderStyle] = useState({ display: 'none' });
 
 
-  window.onscroll = function() {
+  window.onscroll = () => {
     //为了保证兼容性，这里取两个值，哪个有值取哪一个
     //scrollTop就是触发滚轮事件时滚轮的高度
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -35,6 +35,20 @@ export default () => {
     <Button shape="circle" icon={<ArrowRightOutlined/>}
             size={'large'}
             onClick={() => carouselRef.current.next()}/>;
+
+  const displayCenterBlack = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgb(51, 51, 51)'
+  };
+
+  const displayCenterGray = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgb(244, 244, 244)'
+  };
 
   return (
     <>
@@ -84,173 +98,91 @@ export default () => {
       <Carousel dots={false} ref={carouselRef}>
         <div>
           <Row>
-            <Col xs={11} xl={8} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img src={cate_jsj}/>
+            <Col xs={11} xl={8} style={displayCenterGray}>
+                <img src={cate_jsj} alt={''}/>
             </Col>
-            <Col xs={11} xl={9} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+            <Col xs={11} xl={9} style={displayCenterGray}>
               <div>
-                <h1><strong>减速机</strong></h1>
-                <p className={styles.indent}>
+                <Title level={2}>减速机</Title>
+                <Paragraph className={styles.indent}>
                   减速机产品是针对高性能的设备需求来设计，当需要将马达转速降低，输出扭矩提高且完整的将动力传送至应用端，这时您会需要我们的减速机来达成您的要求。
-                </p>
+                </Paragraph>
                 <Button type="dashed" size={'large'}><a href={'/categories/1'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={1} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              {next_button}
+            <Col xs={2} xl={1} style={displayCenterGray}>
+                {next_button}
             </Col>
-            <Col xs={0} xl={6} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <img src={cate_clct}/>
+            <Col xs={0} xl={6} style={displayCenterBlack}>
+                <img src={cate_clct} alt={''}/>
             </Col>
           </Row>
         </div>
         <div>
           <Row>
-            <Col xs={11} xl={8} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img src={cate_clct}/>
+            <Col xs={11} xl={8} style={displayCenterBlack}>
+                <img src={cate_clct} alt={''}/>
             </Col>
-            <Col xs={11} xl={9} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              color: '#f4f4f4',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+            <Col xs={11} xl={9} style={displayCenterBlack}>
               <div>
-                <h1 style={{ color: '#f4f4f4' }}><strong>齿轮齿条</strong></h1>
-                <p className={styles.indent}>
+                <Title style={{color: '#f4f4f4'}} level={2}>齿轮齿条</Title>
+                <Paragraph style={{color: '#f4f4f4'}} className={styles.indent}>
                   齿条的功能已经从单纯的位移或动力传输转换到精确定位。应用高精度齿条，即使没有光栅尺也能精确定位。APEX齿条是全世界唯一一个严格按照规范生产齿排的制造商。所有的品质规范都是为了达到：高定位精度、承受高扭矩、高速度且低噪音运转。APEX也是全世界唯一能自己设计和生产齿排、齿轮和减速机的领导品牌，并提供良好协调的高品质传动组件，以满足不同的工业需求。
-                </p>
+                </Paragraph>
                 <Button type="dashed" ghost size={'large'}><a href={'/categories/2'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={1} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              {next_button}
+            <Col xs={2} xl={1} style={displayCenterBlack}>
+                {next_button}
             </Col>
-            <Col xs={0} xl={6} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <img src={cate_lxsjj}/>
+            <Col xs={0} xl={6} style={displayCenterGray}>
+                <img src={cate_lxsjj} alt={''}/>
             </Col>
           </Row>
         </div>
         <div>
           <Row>
-            <Col xs={11} xl={8} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img src={cate_lxsjj}/>
+            <Col xs={11} xl={8} style={displayCenterGray}>
+                <img src={cate_lxsjj} alt={''}/>
             </Col>
-            <Col xs={11} xl={9} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+            <Col xs={11} xl={9} style={displayCenterGray}>
               <div>
-                <h1><strong>螺旋升降机</strong></h1>
-                <p className={styles.indent}>
+                <Title level={2}>螺旋升降机</Title>
+                <Paragraph className={styles.indent}>
                   开发至今也已21年，深受各界的好评；为提升此项产品且未来公司也备有自组自产( 高
                   速螺纹旋削机)来因应客户行程长短不一要求；以快速製造、组装交货。本公司更依此提升生产效率、降低成本，并在外螺纹与内螺帽的组合上，得到低背隙的精度要求以达品质保证。
-                </p>
+                </Paragraph>
                 <Button type="dashed" size={'large'}><a href={'/categories/3'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={1} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              {next_button}
+            <Col xs={2} xl={1} style={displayCenterGray}>
+                {next_button}
             </Col>
-            <Col xs={0} xl={6} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <img src={cate_dzcl}/>
+            <Col xs={0} xl={6} style={displayCenterBlack}>
+                <img src={cate_dzcl} alt={''}/>
             </Col>
           </Row>
         </div>
         <div>
           <Row>
-            <Col xs={11} xl={8} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img src={cate_dzcl}/>
+            <Col xs={11} xl={8} style={displayCenterBlack}>
+                <img src={cate_dzcl} alt={''}/>
             </Col>
-            <Col xs={11} xl={9} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              color: '#f4f4f4',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+            <Col xs={11} xl={9} style={displayCenterBlack}>
               <div>
-                <h1 style={{ color: '#f4f4f4' }}><strong>定制齿轮</strong></h1>
-                <p className={styles.indent}>
+                <Title style={{ color: '#f4f4f4' }} level={2}>定制齿轮</Title>
+                <Paragraph style={{ color: '#f4f4f4' }} className={styles.indent}>
                   因应客户高品质的要求，从车床、铣床、磨床、滚齿、热处理，到最后的精密研磨制程，我们的持续努力已将齿轮产品推向世界最顶级的品质。公司先进的设备不但具有超精密的齿面加工能力，对于复杂多元的齿形变化及各种齿形修正都有特殊的加工技术。加工模数可从3.5~50。齿轮研磨精度可达世界最高DIN
                   1级。此外，对于金属材料，热处理及其他相关加工技术亦有长期深入的研究，配合多年来齿轮制造的实务经验与严格的品质监控系统，深信是您选购齿轮系列产品的最佳选择。
-                </p>
+                </Paragraph>
                 <Button type="dashed" ghost size={'large'}><a href={'/categories/4'}>查看更多</a></Button>
               </div>
             </Col>
-            <Col xs={2} xl={1} style={{
-              backgroundColor: 'rgb(51, 51, 51)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              {next_button}
+            <Col xs={2} xl={1} style={displayCenterBlack}>
+                {next_button}
             </Col>
-            <Col xs={0} xl={6} style={{
-              backgroundColor: 'rgb(244, 244, 244)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <img src={cate_jsj}/>
+            <Col xs={0} xl={6} style={displayCenterGray}>
+                <img src={cate_jsj} alt={''}/>
             </Col>
           </Row>
         </div>
@@ -262,15 +194,10 @@ export default () => {
       <div>
         <Row style={{ marginTop: 20 }}>
           <Col xs={10} xl={{ span: 4, offset: 2 }}>
-            <Link to={'/news/1'}><img src={new01}/></Link>
+            <Link to={'/news/1'}><img src={new01} alt={''}/></Link>
           </Col>
-          <Col xs={14} xl={16} style={{
-            backgroundColor: '#89C3EB',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <div>
+          <Col xs={14} xl={16} style={{ backgroundColor: '#89C3EB' }}>
+            <div className={styles.displayCenter}>
               <div>
                 <Link to={'/news/1'}><h1>关于行星减速机噪音的分析，你了解吗？</h1></Link>
               </div>
