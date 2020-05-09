@@ -18,18 +18,18 @@ export default () => {
         </div>
       </Col>
       <Col xs={24} xl={{ span: 7 }}>
-        <div style={{ position: 'relative', height: '100%' }}>
-          <p style={{ position: 'absolute', bottom: '0px' }}>
+        <div style={{ position: 'relative', height: '100%', marginTop: 5 }}>
+          <div style={{ position: 'absolute', left: '15%', bottom: '5%' }}>
             Copyright ©2020.GUANGYONG TECH
             <a href={'http://www.beian.miit.gov.cn/'}>冀ICP备17001268号</a>
-          </p>
+          </div>
         </div>
       </Col>
-      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 3 }}>
+      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 3 }} style={{ marginTop: 5 }}>
         <span>微信公众号</span>
         <img src={weixin1}/>
       </Col>
-      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 1 }}>
+      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 1 }} style={{ marginTop: 5 }}>
         <span>微信公众号</span>
         <img src={weixin1}/>
       </Col>
