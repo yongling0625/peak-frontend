@@ -18,7 +18,6 @@
     "umi": "^2.13.3",
     "umi-plugin-react": "^1.15.2",
     "umi-request": "^1.2.19",
-    "react-pdf": "^4.1.0",
     "lodash": "^4.17.15",
     "react-amap": "^1.2.8"
   },
