@@ -99,7 +99,7 @@ export default props => {
           </Card>
         </Col>
         <Col xs={24} xl={9}>
-          <img src={category_img}/>
+          <img src={category_img} alt={''}/>
         </Col>
       </Row>
       <div style={{ marginTop: 20 }}>

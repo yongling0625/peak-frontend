@@ -9,7 +9,7 @@ export default () => {
   return (
     <div>
       <div>
-        <img src={image01}/>
+        <img src={image01} alt={''}/>
       </div>
       <Row style={{ marginTop: 20 }}>
         <Col xs={{ span: 22, offset: 1 }} xl={{ span: 14, offset: 5 }} style={{textAlign:'left'}}>

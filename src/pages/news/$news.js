@@ -17,7 +17,7 @@ export default () => {
         <Title level={2}>关于行星减速机噪音的分析，你了解吗？</Title>
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new01}/>
+            <img src={new01} alt={''}/>
           </Col>
         </Row>
         <Row>
@@ -30,7 +30,7 @@ export default () => {
 
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new02}/>
+            <img src={new02} alt={''}/>
           </Col>
         </Row>
 
@@ -43,7 +43,7 @@ export default () => {
         </Row>
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new03}/>
+            <img src={new03} alt={''}/>
           </Col>
         </Row>
 
@@ -57,7 +57,7 @@ export default () => {
 
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new04}/>
+            <img src={new04} alt={''}/>
           </Col>
         </Row>
 
@@ -71,7 +71,7 @@ export default () => {
 
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new05}/>
+            <img src={new05} alt={''}/>
           </Col>
         </Row>
 
@@ -84,7 +84,7 @@ export default () => {
         </Row>
         <Row>
           <Col xs={24} xl={{ span: 4, offset: 10 }}>
-            <img src={new06}/>
+            <img src={new06} alt={''}/>
           </Col>
         </Row>
 

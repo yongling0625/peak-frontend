@@ -6,14 +6,15 @@ import logo from '@/assets/images/logo.jpg';
 export default () => {
   return (
     <Row style={{ backgroundColor: '#323232', color: '#f4f4f4', marginTop: 30 }}>
-      <Col xs={{span:12,offset:6}} xl={{ span: 2, offset: 1 }} style={{
+      <Col xs={{ span: 6, offset: 2 }} xl={{ span: 2, offset: 1 }} style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: 2
       }}>
-        <img src={logo}  alt={''}/>
+        <img src={logo} alt={''}/>
       </Col>
-      <Col xs={24} xl={{ span: 5}} style={{
+      <Col xs={16} xl={{ span: 5 }} style={{
         textAlign: 'left',
         display: 'flex',
         alignItems: 'center',
@@ -31,14 +32,14 @@ export default () => {
         justifyContent: 'center',
       }}>
         <p>
-            Copyright ©2020.GUANGYONG TECH
-            <a href={'http://www.beian.miit.gov.cn/'}>冀ICP备17001268号</a>
+          Copyright ©2020.GUANGYONG TECH
+          <a href={'http://www.beian.miit.gov.cn/'}>冀ICP备17001268号</a>
         </p>
       </Col>
-      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 3 }} style={{padding: 2}}>
+      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 3 }} style={{ padding: 2 }}>
         <img src={weixin1} alt={''}/>
       </Col>
-      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 1 }} style={{padding: 2}}>
+      <Col xs={{ span: 9, offset: 2 }} xl={{ span: 2, offset: 1 }} style={{ padding: 2 }}>
         <img src={weixin1} alt={''}/>
       </Col>
     </Row>

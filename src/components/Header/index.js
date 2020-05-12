@@ -1,6 +1,6 @@
+import React from 'react';
 import { Menu } from 'antd';
 import { Link } from 'umi';
-import React from 'react';
 
 export default () => {
   return (

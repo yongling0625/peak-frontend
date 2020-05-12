@@ -10,12 +10,12 @@ export default () => {
   return (
     <div>
       <div>
-        <img src={newsheader}/>
+        <img src={newsheader} alt={''}/>
       </div>
       <div>
         <Row style={{marginTop: 20}}>
           <Col xs={10} xl={{span:4 ,offset: 2}}>
-            <Link to={'/news/1'}><img src={new01}/></Link>
+            <Link to={'/news/1'}><img src={new01} alt={''}/></Link>
           </Col>
           <Col xs={14} xl={16}>
             <Typography>

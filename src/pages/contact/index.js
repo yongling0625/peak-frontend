@@ -54,7 +54,7 @@ export default connect()(props => {
             <Paragraph strong>手机：13292669905</Paragraph>
             <Paragraph strong>E-MAIL：<a href="mailto:lfguangyong@163.com">lfguangyong@163.com</a></Paragraph>
             <Paragraph strong>网址：<a href="http://www.gy-peak.cn">www.gy-peak.cn</a></Paragraph>
-            <div style={{ width: 300, height: 300, margin: '0 auto' }}>
+            <div style={{ width: 350, height: 350, margin: '0 auto' }}>
               <Map
                 plugins={['ToolBar']}
                 center={{ longitude: 116.718139, latitude: 39.532615 }}

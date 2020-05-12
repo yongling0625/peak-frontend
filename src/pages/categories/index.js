@@ -1,3 +1,4 @@
+import React from 'react';
 import { List, Card, Col, Row } from 'antd';
 import { Link } from 'umi';
 import cate_jsj from '@/assets/images/category/cate_jsj.png';
@@ -8,7 +9,6 @@ import cate_lxsjj from '@/assets/images/category/cate_lxsjj.png';
 import cate_tbddg from '@/assets/images/category/cate_tbddg.PNG';
 import cate_fjgj from '@/assets/images/category/cate_fjgj.png';
 import cate_zhmj from '@/assets/images/category/cate_zhmj.png';
-import React from 'react';
 
 const { Meta } = Card;
 
