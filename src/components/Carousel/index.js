@@ -5,6 +5,7 @@ import carousel01 from '@/assets/images/carousel/carousel01.jpg';
 import carousel02 from '@/assets/images/carousel/carousel02.jpg';
 import carousel03 from '@/assets/images/carousel/carousel03.jpg';
 import carousel04 from '@/assets/images/carousel/carousel04.jpg';
+import carousel05 from '@/assets/images/carousel/carousel05.jpg';
 import styles from './index.less';
 
 export default () => {
@@ -20,20 +21,19 @@ export default () => {
         autoplaySpeed={3000}
       >
         <div>
-          <img src={carousel02}/>
-          <div className={styles.img_font_blue}>精密传动解决方案提供商</div>
+          <img src={carousel01} alt={''}/>
         </div>
         <div>
-          <img src={carousel01}/>
-          <div className={styles.img_font_white}>专业齿轮定制 满足客户个性化需求</div>
+          <img src={carousel02} alt={''}/>
         </div>
         <div>
-          <img src={carousel03}/>
-          <div className={styles.img_font_blue}>智慧型润滑系统 最多可支持40个润滑点</div>
+          <img src={carousel03} alt={''}/>
         </div>
         <div>
-          <img src={carousel04}/>
-          <div className={styles.img_font_blue}>多点同步XYZ组合模组</div>
+          <img src={carousel04} alt={''}/>
+        </div>
+        <div>
+          <img src={carousel05} alt={''}/>
         </div>
       </Carousel>
       <LeftCircleOutlined className={styles.prev} onClick={() => carouselRef.current.prev()}/>
