@@ -89,7 +89,15 @@ export default connect(({ products, loading }) => ({
           </Row>
         </TabPane>
         <TabPane tab="产品尺寸" key="3">
-          Content of card tab 3
+          <Row>
+            <Col xs={{ span: 22, offset: 1 }} xl={{ span: 16, offset: 4 }}>
+              {
+                product.sizeImgList && _.map(product.sizeImgList, img =>
+                  <img src={img} alt={''}/>,
+                )
+              }
+            </Col>
+          </Row>
         </TabPane>
       </Tabs>
     </div>
